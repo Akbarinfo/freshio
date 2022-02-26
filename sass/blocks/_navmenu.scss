@@ -1,0 +1,403 @@
+/* HEADER NAV MENU */
+
+.header-nav {
+  background-color: $color-0a47;
+
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__link {
+    position: relative;
+    color: $color-white;
+    text-decoration: none;
+    transition: all 0.3s linear;
+  }
+
+  &__item {
+    position: relative;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 21px 0;
+    margin-left: 55px;
+
+    &:hover .header-nav__link {
+      color: $color-bac;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: -20px;
+    font-size: 18px;
+  }
+
+  &__box-btn,
+  &__box-left-btn {
+    display: none;
+  }
+
+}
+
+
+/* MENU SITE DROP DOWN */
+
+.mdown {
+  display: none;
+  transform: translateY(25px);
+  position: absolute;
+  top: 64px;
+  background-color: $color-white;
+  border: 1px solid #00000026;
+  box-shadow: 0 0 5px 0 #0000003d;
+  min-width: 185px;
+  font-weight: 300;
+  padding: 20px;
+  list-style-type: none;
+  animation: mdown 0.3s linear;
+  z-index: 10;
+
+  &__list {
+    list-style-type: none;
+    min-width: 185px;
+  }
+
+  &__item {
+    line-height: 25px;
+    padding: 3px 0;
+
+    &:hover .mdown__link {
+      color: $color-bac;
+    }
+
+  }
+
+  &__link {
+    color: $color-4141;
+    text-decoration: none;
+    transition: all 0.3s linear;
+  }
+
+  &__bold {
+    font-weight: 600;
+    color: $color-black;
+  }
+
+  &__wh {
+    width: 80px;
+    padding: 0 10px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: translateY(-8px);
+    }
+
+    &:hover .mdown__border {
+      border: 1px solid $color-bac;
+    }
+
+  }
+
+  &__border {
+    display: block;
+    border: 1px solid $color-e2e2;
+    padding: 5px;
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.header-nav__item:hover .mdown {
+  display: block;
+  transform: translateY(0);
+}
+
+.header-nav__item:hover .mleft {
+  display: flex;
+  left: -120px;
+}
+
+.header-nav__item:hover .mpages {
+  display: flex;
+  left: -210px;
+}
+
+@keyframes mdown {
+  0% {
+    transform: translateY(25px);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* DROP MENU */
+
+.drop-menu {
+
+  &__btn {
+    width: 295px;
+    @include bg-br-none();
+    border-right: 1px solid $color-f4;
+    font-size: 14px;
+    color: $color-white;
+    cursor: pointer;
+    padding: 10px 30px;
+    margin: 11px 0;
+  }
+
+  &__icon-menu {
+    font-size: 24px;
+    margin-right: 15px;
+  }
+
+  &__list {
+    width: 295px;
+    padding: 10px 20px 20px;
+    border-radius: 4px;
+    box-shadow: 0 5px 5px 0 #000000bf;
+    transition: height 0.4s ease;
+  }
+
+  &__link {
+    width: 100%;
+    color: $color-aca;
+    text-decoration: none;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-weight: 500;
+    padding: 13px 0;
+    border-bottom: 1px solid $color-e4e4;
+
+    &:hover .drop-menu__link {
+      color: $color-bac;
+    }
+
+  }
+
+  &__icon {
+    position: relative;
+    top: 3px;
+    font-size: 21px;
+    font-weight: 400;
+    margin-right: 15px;
+  }
+
+  &__icon-right {
+    position: relative;
+    top: 5px;
+    float: right;
+    font-size: 18px;
+  }
+
+}
+
+/* NESTED DROP DOWN */
+
+.ddown {
+  width: 200px;
+  max-width: 200px;
+  position: absolute;
+  top: 30px;
+  right: -189px;
+  background-color: $color-white;
+  border: 1px solid #00000026;
+  box-shadow: 0 0 5px 0 #00000059;
+  list-style-type: none;
+  padding: 8px 0;
+  z-index: 10;
+  transition: all 0.3s linear;
+  opacity: 0;
+
+  &__link {
+    text-decoration: none;
+    color: $color-aaa;
+  }
+
+  &__item {
+    font-size: 14px;
+    padding: 8px 15px;
+
+
+    &:hover {
+      background-color: #00000008;
+    }
+
+    &:hover .ddown__link {
+      color: $color-bac;
+    }
+  }
+
+}
+
+.drop-menu__item:hover .ddown {
+   top: 0;
+   opacity: 1;
+}
+
+
+/* NESTED DROP DOWN END */
+
+/* HEADER NAV MENU END */
+
+
+@media screen and (max-width: 992px) {
+
+  .header-nav {
+
+    &__list {
+      background-color: $color-0a47;
+      top: 0;
+      width: 300px;
+      height: 100vh;
+      position: fixed;
+      left: -350px;
+      flex-direction: column;
+      z-index: 1000;
+    }
+
+    &__item {
+      border-bottom: 1px solid $color-0735;
+      padding: 0 15px;
+      margin: 0;
+
+      &:nth-child(2) .header-nav__link {
+        color: $color-bac;
+      }
+    }
+
+    &__link {
+      width: 80%;
+    }
+
+    &__icon-x {
+      position: relative;
+      top: 2px;
+      font-size: 18px;
+    }
+
+    &__icon-left {
+      position: relative;
+      left: 8px;
+      font-size: 18px;
+      color: $color-white;
+    }
+
+    &__box-btn {
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid $color-0735;
+      padding: 15px;
+    }
+
+    &__box-left-btn {
+      @include bg-br-none();
+      display: inline-block;
+      border-left: 1px solid $color-0735;
+      padding: 15px 8px;
+    }
+
+    &__btn {
+      width: 100%;
+      @include bg-br-none();
+      color: $color-bac;
+      text-align: end;
+    }
+
+    &__icon {
+      display: none;
+    }
+
+
+    .header-nav__item:hover .mdown {
+      // display: none !important;
+      // left: -350px;
+    }
+
+    .header-nav__item:hover .mleft {
+      // display: none !important;
+      // left: 0;
+    }
+
+    .header-nav__item:hover .mpages {
+      // display: none !important;
+    }
+
+
+  }
+
+
+
+
+  .drop-menu {
+    width: 100%;
+
+    &__btn {
+      width: 100%;
+      border: none;
+    }
+
+    &__list {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  .mdown {
+    display: block;
+    width: 300px;
+    background-color: $color-0a47;
+    position: fixed;
+    top: 0;
+    left: -350px;
+    transition: all 0.3s linear;
+    transform: translateY(0);
+    z-index: 10000;
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      background-color: $color-0a47;
+      z-index: 10001;
+    }
+
+    &__item {
+      border-bottom: 1px solid $color-0735;
+      padding: 15px 0;
+      margin: 0;
+    }
+
+    &__link {
+      color: $color-white;
+    }
+  }
+
+  .mleft {
+    flex-direction: column;
+    // left: -350px;
+  }
+}
+
+
+.open-nav {
+  left: 0px;
+}
+
+.open-mdown {
+  display: inline-block;
+  left: 0;
+}

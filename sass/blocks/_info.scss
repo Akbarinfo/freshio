@@ -1,0 +1,86 @@
+/* INFO BREND */
+
+.info {
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    border-bottom: 1px solid $color-e2e2;
+  }
+
+
+  &__item {
+    position: relative;
+    padding: 60px 15px;
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 0;
+      height: 3px;
+      background-color: $color-0a47;
+      position: absolute;
+      bottom: 1px;
+      left: 1px;
+      transition: all 0.3s linear;
+    }
+
+    &:hover::after {
+      width: 100%;
+
+    }
+  }
+
+  &__main {
+    padding-left: 15px;
+  }
+
+  &__title {
+    font-size: 16px;
+    color: $color-0a47;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-size: 12px;
+    line-height: 18px;
+    color: $color-555;
+  }
+}
+
+@media screen and (max-width:1200px) {
+
+  .info {
+
+    &__item::after {
+      display: none;
+  }
+  }
+}
+
+@media screen and (max-width:992px) {
+
+  .info {
+
+    &__item:first-child,
+    &__item:nth-child(2) {
+      padding-bottom: 0;
+  }
+  }
+}
+
+@media screen and (max-width:576px) {
+
+  .info {
+
+    &__item {
+      max-width: 250px;
+      padding: 30px 15px 0;
+      margin: 0 auto;
+  }
+    &__item:last-child {
+      padding: 30px 15px;
+    }
+  }
+}

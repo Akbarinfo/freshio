@@ -1,0 +1,181 @@
+/* CUSTOMER */
+
+.customer {
+  padding-bottom: 85px;
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    padding-bottom: 40px;
+
+    &:nth-child(2) {
+      display: flex;
+      flex-flow: row-reverse;
+    }
+
+    &:nth-child(2) .customer__main {
+      padding: 0;
+      padding-right: 80px;
+    }
+
+    &:nth-child(2) {
+      align-items: center;
+    }
+
+    &:nth-child(2) .customer__title {
+      margin-bottom: 30px;
+    }
+
+    &:nth-child(2) .customer__desc {
+      color: $color-black;
+    }
+
+    &:nth-child(2) .customer__imgbox {
+      padding-right: 0;
+      padding-left: 15px;
+    }
+
+  }
+
+  &__imgbox {
+    padding-right: 15px;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__main {
+    padding: 0 80px;
+  }
+
+  &__title {
+    max-width: 370px;
+    font-size: 30px;
+    color: $color-0a47;
+    letter-spacing: -0.75px;
+    line-height: 35px;
+    margin-bottom: 20px;
+  }
+
+  &__desc {
+    font-size: 14px;
+    color: $color-555;
+    margin-bottom: 16px;
+  }
+
+  &__link {
+    display: inline-block;
+    border-bottom: 1px solid $color-bac;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    color: $color-bac;
+    padding-bottom: 5px;
+
+    &:hover {
+      color: $color-bac;
+    }
+
+    &:hover .customer__right{
+      transform: translateX(5px)
+    }
+  }
+
+  &__right {
+    @include anime-right();
+  }
+
+  &__info {
+    padding-left: 60px;
+  }
+
+  &__text {
+    font-size: 12px;
+    color: $color-aaa;
+    margin-bottom: 40px;
+  }
+
+  &__btn {
+    width: 10px;
+    height: 10px;
+    background-color: $color-aaa;
+    border: 1px solid $color-aaa;
+    border-radius: 50%;
+    margin: 0 15px;
+    padding: 0;
+  }
+
+  &__icon {
+    width: 48px;
+    height: 38px;
+  }
+}
+
+.customer__btnbox .active {
+  background-color: $color-0735;
+  border-color: $color-0735;
+
+}
+
+@media screen and (max-width:1200px) {
+  .customer {
+
+    &__item {
+
+      &:nth-child(2) .customer__main {
+        padding: 0;
+        padding-right: 15px;
+      }
+
+    }
+
+    &__main {
+      padding: 0 15px;
+    }
+  }
+}
+
+@media screen and (max-width:992px) {
+  .customer {
+
+    &__item {
+      padding-bottom: 60px;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+  .customer {
+
+    &__item {
+      padding-bottom: 40px;
+    }
+
+    &__imgbox {
+      margin-bottom: 20px;
+    }
+
+    &__main {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width:480px) {
+
+  .customer {
+
+    &__info {
+      padding-left: 20px;
+    }
+
+    &__icon {
+      width: 40px;
+      height: 31px;
+    }
+  }
+
+}

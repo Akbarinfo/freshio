@@ -1,2 +1,251 @@
 /* HERO PART  */
 
+.hero {
+  position: relative;
+  padding-top: 30px;
+
+  &__btnbox {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+    width: 150px;
+  }
+
+
+  &__next-btn {
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+    background-color: $color-white;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background-color: $color-bac;
+      border-color: $color-bac;
+    }
+
+  }
+
+  &__icon-left {
+    position: relative;
+    top: 3px;
+    font-size: 24px;
+    color: $color-black;
+
+  }
+
+  &__main {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+  }
+
+  &__title {
+    font-family: $font-rich;
+    font-size: 24px;
+    line-height: 24px;
+    color: $color-bac;
+    margin-bottom: 25px;
+    animation: anime 0.9s linear 0.6s both;
+  }
+
+  &__subtitle {
+    font-size: 40px;
+    line-height: 45px;
+    color: $color-0a47;
+    font-weight: 300;
+    margin-bottom: 25px;
+    animation: anime 0.9s linear 0.6s both;
+  }
+
+  &__link {
+    font-weight: 600;
+    font-size: 12px;
+    color: $color-black;
+    border-bottom: 1px solid $color-black;
+    text-decoration: none;
+    padding-bottom: 5px;
+    transition: all 0.3 linear;
+    animation: anime 0.9s linear 0.6s both;
+
+    &:hover {
+      color: $color-bac;
+      border-color: $color-bac;
+    }
+
+    &:hover .hero__right {
+      transform: translateX(5px);
+    }
+  }
+
+  &__right {
+    @include anime-right();
+  }
+
+  &__imgbox {
+    max-width: 410px;
+    position: relative;
+    padding: 0 15px;
+    overflow: hidden;
+    border-radius: 4px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__name {
+    font-family: $font-rich;
+    font-size: 24px;
+    line-height: 1.1;
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 15px;
+  }
+
+  &__sale {
+    font-size: 40px;
+    color: $color-f4ed;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    font-size: 12px;
+    color: $color-white;
+    margin-bottom: 20px;
+  }
+
+  &__link-btn {
+    display: inline-block;
+    background-color: $color-bac;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 12px;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 12px 29px 9px 29px;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-bac;
+    }
+
+    &:hover .hero__right {
+      transform: translateX(5px);
+    }
+  }
+
+}
+
+@keyframes anime {
+  0% {
+    transform: translateX(-42px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+
+.hero-box {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+
+  &__title {
+    font-size: 24px;
+    line-height: 30px;
+    color: $color-0a47;
+    font-weight: 300;
+    margin-bottom: 110px;
+  }
+}
+
+.hero__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 21%;
+  left: 27%;
+}
+
+@media screen and (max-width:1200px) {
+
+  .hero {
+
+    &__imgbox {
+      max-width: 450px;
+    }
+
+  }
+
+  .hero-box__title {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width:992px) {
+
+  .hero {
+
+    &__imgbox {
+      width: 50%;
+    }
+  }
+}
+
+@media screen and (max-width:768px) {
+
+  .hero {
+
+    &__imgbox {
+      width: 100%;
+      max-width: 100%;
+      height: 270px;
+    }
+
+    &__img {
+      width: 100%;
+      max-width: 100%;
+      height: 270px;
+    }
+
+    &__body {
+
+    }
+  }
+}
+
+@media screen and (max-width:450px) {
+
+  .hero__body {
+    left: 25%;
+  }
+
+}
+
+@media screen and (max-width:380px) {
+
+  .hero__body {
+    left: 15%;
+  }
+}
+
+@media screen and (max-width:380px) {
+
+  .hero__body {
+    left: 8%;
+  }
+
+}

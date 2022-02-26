@@ -1,5 +1,106 @@
 /* FOOTER PART */
 
 .footer {
-  background-color: #fff;
+
+  &__box {
+    padding: 60px 0;
+  }
+
+  &__main {
+
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: $color-black;
+    margin-bottom: 30px;
+  }
+
+  &__info {
+    font-size: 14px;
+    color: $color-black;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+
+  &__day {
+    font-size: 14px;
+    color: $color-aaa;
+  }
+
+  &__date {
+    font-size: 14px;
+    color: $color-black;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+
+    margin-bottom: 15px;
+
+    &:first-child {
+      font-size: 12px;
+      font-weight: 600;
+      color: $color-black;
+      letter-spacing: 2.4px;
+      text-transform: uppercase;
+      margin-bottom: 30px;
+    }
+
+    &:hover .footer-nav__link {
+      color: $color-bac;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    color: $color-aaa;
+    text-decoration: none;
+    transition: all 0.3s linear;
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: $color-black;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    padding-top: 30px;
+  }
+
+  &__copyright {
+    padding: 40px 0;
+  }
+
+  &__copy {
+    font-size: 12px;
+    color: $color-aaa;
+  }
+
+  &__span {
+    color: $color-bac;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .footer__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
 }

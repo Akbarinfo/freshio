@@ -1,0 +1,20 @@
+@mixin bg-br-none {
+  background: none;
+  border: none;
+}
+
+@mixin anime-right {
+  position: relative;
+  top: 2px;
+  font-size: 14px;
+  transition: all 0.3s linear;
+}
+
+
+@mixin hr {
+  display: block;
+  height: 1px;
+  transition: all 0.3s linear;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}

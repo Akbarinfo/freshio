@@ -1,0 +1,233 @@
+/* SIGN IN SIGN UP */
+
+.sign {
+  width: 310px;
+  height: 100vh;
+  overflow: auto;
+
+  &__body {
+    padding: 16px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.1;
+    color: $color-bac;
+    margin-bottom: 20px;
+  }
+
+  &__form {
+    margin-bottom: 40px;
+  }
+
+  &__label {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    width: 268px;
+    background: none;
+    border: 1px solid $color-e2e2;
+    border-radius: 4px;
+    font-size: 14px;
+    color: $color-aaa;
+    padding: 8px 30px 8px 16px;
+
+    &:focus {
+      outline: 1px solid $color-bac;
+    }
+
+  }
+
+  &__check {
+    font-size: 12px;
+    text-transform: capitalize;
+    color: $color-4141;
+    margin: 8px 0;
+  }
+
+  &__forgot {
+    text-decoration: none;
+    color: $color-4141;
+    padding: 0 15px;
+    padding-left: 30px;
+
+
+    &:hover {
+      color: $color-bac;
+    }
+  }
+
+  &__btn-login {
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid $color-bac;
+    line-height: 1.25;
+    text-align: center;
+    background-color: $color-bac;
+    border-radius: 20px;
+    color: $color-white;
+    padding: 10px 15px 7px 15px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+
+    }
+
+  &__key-icon {
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    font-size: 26px;
+    color: $color-4141;
+  }
+
+  &__socical {
+    list-style-type: none;
+    margin-bottom: 30px;
+  }
+
+
+  &__socical-item {
+    margin: 5px 4px 0 0;
+  }
+
+  &__socical-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+
+  &__socical-icon {
+    font-size: 16px;
+    color: $color-white;
+  }
+
+  &__face {
+    background-color: $color-4c68;
+    border: 1px solid $color-4c68;
+    transition: all 0.3s linear;
+
+
+    &:hover {
+      background: none;
+      border: 1px solid $color-4c68;
+    }
+
+    &:hover .sign__socical-icon {
+      color: $color-4c68;
+    }
+  }
+
+  &__go {
+    background-color: $color-4285;
+    border: 1px solid $color-4285;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background: none;
+      border: 1px solid $color-4285;
+    }
+
+    &:hover .sign__socical-icon {
+      color: $color-4285;
+    }
+  }
+
+  &__tw {
+    background-color: $color-53d1;
+    border: 1px solid $color-53d1;
+    transition: all 0.3s linear;
+
+    &:hover {
+      background: none;
+      border: 1px solid $color-53d1;
+    }
+
+    &:hover .sign__socical-icon {
+      color: $color-53d1;
+    }
+  }
+
+  &__box {
+    width: 50%;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: $color-aaa;
+    margin-bottom: 10px;
+  }
+
+  &__flag {
+    width: 70%;
+    list-style-type: none;
+  }
+
+  &__flag-item {
+    padding: 2px 4px;
+    padding-top: 0;
+
+  }
+
+  &__link {
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color-aaa;
+    transition: all 0.3s linear;
+    padding: 0 5px;
+
+    &:hover {
+      color: $color-bac;
+    }
+
+    &-activ {
+      color: $color-bac;
+    }
+  }
+
+  &__main {
+    flex-direction: column;
+    border-left: 1px solid $color-e2e2;
+    list-style-type: none;
+    padding-left: 15px;
+  }
+
+  &__main-item {
+    position: relative;
+    font-size: 13px;
+    margin-bottom: 6px;
+
+    &:nth-child(4) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__main-link {
+    color: $color-aaa;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-bac;
+    }
+  }
+
+  &__main-icon {
+    position: relative;
+    top: 2px;
+    right: 5px;
+    font-size: 15px;
+  }
+
+  &__main-item:last-child &__main-icon {
+    font-size: 21px;
+    top: 5px;
+    left: -8px;
+    right: -5px;
+  }
+}
+
+/* SIGN IN SIGN UP END */

@@ -1,14 +1,36 @@
 *,
 *::after,
-*::before {
+*::before
+ul,
+li,
+p {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  margin-bottom: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 body {
-  background-color: #fff;
-  font-family: sans-serif;
+  width: 100%;
+  background-color: #fcf4e9;
+  font-family: Mazzard Soft H;
   font-weight: 400;
   min-height: 100vh;
   display: flex;
@@ -21,4 +43,16 @@ main {
 
 html {
   scroll-behavior: smooth;
+}
+
+.body-top {
+  background-image: url('../img/bgbody_top.jpg'), url('../img/bgbody_bottom.jpg');
+  background-repeat: no-repeat;
+  background-position: top center, bottom center;
+}
+
+.white-fon {
+  max-width: 1450px;
+  background-color: #fff;
+  margin: 0 auto;
 }

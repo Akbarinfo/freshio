@@ -1,0 +1,153 @@
+/* SUPPORT */
+
+.support {
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    padding: 0 15px;
+
+  }
+
+  &__box {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 1px solid $color-e2e2;
+    padding: 40px 0;
+
+  }
+
+  &__imgbox {
+    width: 32%;
+  }
+
+  &__img {
+    object-fit: contain;
+  }
+
+  &__main {
+    width: 67%;
+    padding: 0 15px 0 25px;
+    border-left: 1px solid $color-e2e2;
+  }
+
+  &__title {
+    font-size: 13px;
+    color: $color-aaa;
+    margin-bottom: 10px;
+  }
+
+  &__subtitle {
+    font-size: 12px;
+    font-weight: 600;
+    color: $color-black;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__tel {
+    display: block;
+    font-size: 30px;
+    line-height: 30px;
+    text-decoration: none;
+    color: $color-bac;
+    margin-bottom: 15px;
+
+    &:hover {
+      color: $color-bac;
+    }
+  }
+
+  &__mail {
+    display: block;
+    font-size: 14px;
+    text-decoration: none;
+    color: $color-0a47;
+
+    &:hover {
+      color: $color-0a47;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-555;
+    margin-bottom: 10px;
+  }
+
+  &__form {
+    position: relative;
+    width: 100%;
+    border: 1px solid #e2e2e2;
+    border-radius: 50px;
+    padding: 0 15px 0 15px;
+
+  }
+
+  &__input {
+    @include bg-br-none();
+    height: 38px;
+    font-size: 16px;
+    line-height: 20;
+    color: $color-black;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+
+  &__btn {
+    @include bg-br-none();
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    &:hover .support__right {
+      color: $color-bac;
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .support {
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__item {
+      width: 100%;
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__box {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__main {
+      width: 100%;
+      border: none;
+      text-align: center;
+    }
+
+    &__imgbox {
+      margin-bottom: 15px;
+    }
+
+  }
+
+}
+/* SUPPORT END */
